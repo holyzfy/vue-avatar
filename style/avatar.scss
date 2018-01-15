@@ -1,0 +1,162 @@
+$blue: #0267db;
+.btn {
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #777;
+    text-align: center;
+    &:hover {
+        color: $blue;
+    }
+    &[disabled] {
+        color: #777;
+    }
+}
+.btn-submit {
+    color: $blue;
+}
+.avatar {
+    margin: 50px;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: -10px;
+        margin-left: -10px;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        border-bottom: 10px solid #ddd;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+    }
+    &:after {
+        top: -9px;
+        border-bottom-color: #fff;
+    }
+}
+.avatar-aside {
+    float: left;
+    width: 100px;
+    padding-left: 15px;
+    li {
+        position: relative;
+        margin-top: 15px;
+    }
+    .selected {
+        &, a {
+            color: $blue;
+        }
+    }
+    input {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 100px;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+.avatar-hd {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding: 0 5px;
+    border-radius: 5px;
+    line-height: 30px;
+    background: $blue;
+    color: #fff;
+    input {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 100px;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+.avatar-bd {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #a7a7a7;
+    overflow: hidden;
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        cursor: move;
+    }
+}
+.avatar-zoom {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    padding: 0 10px;
+}
+.avatar-zoom-inner {
+    position: relative;
+    border: 1px solid #a7a7a7;
+    border-radius: 100px;
+    padding: 1px 20px;
+    background: #fff;
+}
+.avatar-zoomout,
+.avatar-zoomin {
+    position: absolute;
+    top: -1px;
+    width: 14px;
+    height: 14px;
+    line-height: 1;
+    border: 0;
+    color: #777777;
+    cursor: pointer;
+    background-color: transparent;
+}
+.avatar-zoomout {
+    left: 4px;
+}
+.avatar-zoomin {
+    right: 4px;
+}
+.avatar-track {
+    border: 1px solid #989898;
+    border-radius: 100px;
+    background: #ccc;
+}
+.avatar-track-bd {
+    position: relative;
+    margin-right: 10px;
+    height: 10px;
+}
+.avatar-thumb {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    margin-left: -1px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #989898;
+    border-radius: 100px;
+    background-color: #f9f9f9;
+    background: linear-gradient(to bottom, #f9f9f9 0%, #d0cfcf 100%);
+}
+.avatar-ft {
+    margin-top: 10px;
+    .btn {
+        width: 60px;
+        margin-left: 10px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}

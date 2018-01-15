@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Avatar</title>
+<link rel="stylesheet" href="style/reset.css">
+<link rel="stylesheet" href="style/avatar.css">
+<script src="js/lib/vue-2.5.13.js"></script>
+<script src="js/lib/jquery-3.2.1.js"></script>
+<script src="js/drag.js"></script>
+</head>
+
+<body>
+<div id="avatar" class="avatar">
+    <div class="avatar-hd">选择图片<input v-if="showField" type="file" @change="fieldChanged($event)" accept="image/gif,image/jpeg,image/jpg,image/png" title="请选择图片"></div>
+    <div v-if="src" class="avatar-bd">
+        <img ref="img" :src="src" crossOrigin="anonymous" alt="" @load="imgLoaded($event)" @mousedown="dragImg($event)"
+            :style="{'transform': 'translateX(-50%) translateY(-50%) scale(' + scale + ')'}">
+        <!-- <div v-else class="avatar-img" :style="{'background-image': 'url(' + src + ')'}"></div> -->
+        <div class="avatar-zoom">
+            <div class="avatar-zoom-inner">
+                <button type="button" class="avatar-zoomout" title="缩小" @click="zoomOut">-</button>
+                <div class="avatar-track">
+                    <div class="avatar-track-bd">
+                        <button type="button" class="avatar-thumb" @mousedown="dragTrackButton($event)" :style="{left: percent + '%'}"></button>
+                    </div>
+                </div>
+                <button type="button" class="avatar-zoomin" title="放大"  @click="zoomIn">+</button>
+            </div>
+        </div>
+    </div>
+    <div v-if="src" class="avatar-ft">
+        <button type="button" class="btn" @click="close">取 消</button>
+        <button type="button" class="btn btn-submit" @click="save">确 定</button>
+    </div>
+</div>
+<script src="js/index.js"></script>
+<script>
+start('#avatar');
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+}
+
+em {
+  font-style: normal;
+}
+
+body {
+  font-family: "PingFang SC", "STHeitiSC-Light", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+}
+
+button, input, select, textarea {
+  font-family: "PingFang SC", "STHeitiSC-Light", "Microsoft YaHei", sans-serif;
+  font-size: 100%;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+button[disabled] {
+  cursor: default;
+}
+
+/*# sourceMappingURL=reset.css.map */
